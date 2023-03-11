@@ -25,6 +25,9 @@
    .bayan:hover {
       color: #000;
    }   
+   .bayan:hover .bayan__item-trigger__arrow {
+      opacity: 1;
+   }
 }
 .bayan__item {
    margin-bottom: 20px;
@@ -33,9 +36,16 @@
    display: none;
 }
 .bayan__item-trigger {
-   display: block;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
    padding: 20px;
    border: 1px solid #000;
+}
+.bayan__item-trigger__arrow {
+   opacity: 0;
+   width: 20px;
+   transition: all .3s ease-in-out;
 }
 .bayan__item-content {
    display: flex;
@@ -58,4 +68,7 @@
    min-height: 500px;
    opacity: 1;
    padding: 30px;
+}
+.bayan__item-input:checked  ~ .bayan__item-trigger .bayan__item-trigger__arrow{
+   transform: rotate(180deg);
 }
