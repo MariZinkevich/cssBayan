@@ -6,6 +6,7 @@
    border: none;
    box-sizing: border-box;
 }
+/* transition: all .3s ease-in-out; */
 .wrapp {
    width: 1200px;
    margin: 0 auto;
@@ -16,6 +17,14 @@
    max-width: 900px;
    display: flex;
    flex-direction: column;
+   color: blue;
+   font-weight: 700;
+   transition: all .3s ease-in-out;
+}
+@media (hover: hover) {
+   .bayan:hover {
+      color: #000;
+   }   
 }
 .bayan__item {
    margin-bottom: 20px;
@@ -43,7 +52,7 @@
    margin: 0 auto;
 }
 .bayan__item-input:checked ~ .bayan__item-trigger {
-
+   color: #000;
 }
 .bayan__item-input:checked ~ .bayan__item-content {
    min-height: 500px;
