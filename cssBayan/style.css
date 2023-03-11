@@ -1,1 +1,52 @@
-body{background: #000;}
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   border: none;
+   box-sizing: border-box;
+}
+.wrapp {
+   width: 1200px;
+   margin: 0 auto;
+   padding: 10px;
+}
+.bayan {
+   margin: 0 auto;
+   max-width: 900px;
+   display: flex;
+   flex-direction: column;
+}
+.bayan__item {
+   margin-bottom: 20px;
+}
+.bayan__item-input {
+   display: none;
+}
+.bayan__item-trigger {
+   display: block;
+   padding: 20px;
+   border: 1px solid #000;
+}
+.bayan__item-content {
+   display: flex;
+
+   max-height: 0;
+   opacity: 0;
+   border: 1px solid #000;
+   border-top: none;
+   text-align: center;
+   transition: all .3s ease-in-out;
+}
+.bayan__item-content__img {
+   max-width: 400px;
+   margin: 0 auto;
+}
+.bayan__item-input:checked ~ .bayan__item-trigger {
+
+}
+.bayan__item-input:checked ~ .bayan__item-content {
+   min-height: 500px;
+   opacity: 1;
+   padding: 30px;
+}
