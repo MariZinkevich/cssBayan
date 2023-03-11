@@ -30,16 +30,17 @@
    }
 }
 .bayan__item {
-   margin-bottom: 20px;
+   margin-bottom: 50px;
 }
 .bayan__item-input {
    display: none;
 }
 .bayan__item-trigger {
+   padding: 20px;
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 20px;
+   font-size: 2em;
    border: 1px solid #000;
 }
 .bayan__item-trigger__arrow {
@@ -49,7 +50,6 @@
 }
 .bayan__item-content {
    display: flex;
-
    max-height: 0;
    opacity: 0;
    border: 1px solid #000;
@@ -60,6 +60,7 @@
 .bayan__item-content__img {
    max-width: 400px;
    margin: 0 auto;
+   transition: all .3s ease-in-out;
 }
 .bayan__item-input:checked ~ .bayan__item-trigger {
    color: #000;
@@ -69,6 +70,13 @@
    opacity: 1;
    padding: 30px;
 }
-.bayan__item-input:checked  ~ .bayan__item-trigger .bayan__item-trigger__arrow{
+.bayan__item-input:checked ~ .bayan__item-trigger .bayan__item-trigger__arrow,
+.bayan__item-trigger:hover .bayan__item-trigger__arrow{
    transform: rotate(180deg);
+}
+.bayan__item-trigger:hover ~ .bayan__item-content,
+.bayan__item-content:hover{
+   min-height: 500px;
+   opacity: 1;
+   padding: 30px;
 }
